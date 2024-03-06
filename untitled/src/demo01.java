@@ -1,2 +1,22 @@
-package PACKAGE_NAME;public class demo01 {
+public class demo01 {
+    int [] count={0,0,0,0,0,0,0,0,0};
+    public static void main(String[] args) {
+        int i=0;
+        for (int j=1;j<20210;j++)
+        {
+            String z=j+"";
+            if(new demo01().F(z)==1)
+            {
+                System.out.println("hee");
+                System.out.println(j);
+            }
+        }
+
+    }
+
 }
+/*小蓝有很多数字卡片，每张卡片上都是数字0 到9。
+小蓝准备用这些卡片来拼一些数，他想从1 开始拼出正整数，每拼一个，就保存起来，卡片就不能用来拼其它数了。
+小蓝想知道自己能从1 拼到多少。
+例如，当小蓝有30 张卡片，其中0 到9 各3 张，则小蓝可以拼出1 到10，但是拼11 时卡片1 已经只有一张了
+，不够拼出11。现在小蓝手里有0到9 的卡片各2021 张，共20210 张，请问小蓝可以从1拼到多少?提示:建议使用计算机编程解决问题。**/

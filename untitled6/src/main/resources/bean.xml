@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user1" class="org.example.User">
+<!--        <constructor-arg value="0"/>-->
+        <property name="name" value="孔德伟"></property>
+        <property name="age" value="10"></property>
+<!--        <property name="names" value="llll"></property>-->
+    </bean>
+<!--使用set注入的方式进行依赖注入要确保有空的构造函数-->
+    
+    <bean id="user2" class="org.example.User" >
+        <constructor-arg name="name" value="kongdewei_contrustor"></constructor-arg>
+        <constructor-arg name="age" value="11"></constructor-arg>
+    </bean>
+
+    <bean id="manger01" class="org.example.mangerImpl">
+        <property name="age" value="1000"></property>
+    </bean>
+
+
+    <bean id="manger02" class="org.example.mangerImpl">
+        <property name="age" value="2000"></property>
+    </bean>
+
+
+    <bean id="manger03" class="org.example.mangerImpl">
+        <property name="age" value="3000"></property>
+    </bean>
+
+    <bean id="manger04" class="org.example.mangerImpl">
+       <constructor-arg name="age" value="4000"></constructor-arg>
+        <constructor-arg name="height" value="40"></constructor-arg>
+    </bean>
+
+
+    <bean id="manger05" class="org.example.mangerImpl" scope="prototype">
+<!--        <property name="age" value="5000"></property>-->
+        <constructor-arg name="age" value="5000"></constructor-arg>
+        <constructor-arg name="height" value="50"></constructor-arg>
+
+    </bean>
+
+    <bean id="manger06" class="org.example.mangerImpl" scope="prototype" lazy-init="true">
+<!--    <property name="age" value="6000"></property>-->
+        <constructor-arg name="age" value="6000"></constructor-arg>
+        <constructor-arg name="height" value="60"></constructor-arg>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+ <bean id="teacher01" class="org.example.teacher">
+     <property name="name" value="math_teacher"></property>
+     <property name="age" value="20"></property>
+ </bean>
+
+
+    <bean id="teacher02" class="org.example.teacher">
+        <property name="name" value="math_teacher"></property>
+        <property name="age" value="20"></property>
+    </bean>
+
+
+    <bean id="teacher03" class="org.example.teacher">
+        <property name="name" value="math_teacher"></property>
+        <property name="age" value="20"></property>
+    </bean>
+
+    <!--
+
+
+    -->
+
+
+    <bean id="student01" class="org.example.student">
+        <property name="arrays">
+            <array>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+                <value>4</value>
+            </array>
+        </property>
+
+
+        <property name="std">
+            <map>
+                <entry>
+                    <key>
+                       <ref bean="teacher01"></ref>
+                    </key><value>one</value>
+                </entry>
+                <entry>
+                    <key>
+                        <ref bean="teacher02"></ref>
+                    </key><value>ones</value>
+                </entry>
+                <entry>
+                    <key>
+                        <ref bean="teacher03"></ref>
+                    </key><value>oness</value>
+                </entry>
+            </map>
+        </property>
+
+        <property name="list">
+            <list>
+                <ref bean="teacher01"></ref>
+                <ref bean="teacher01"></ref>
+                <ref bean="teacher02"></ref>
+            </list>
+        </property>
+
+
+
+
+
+        <property name="teacherMap">
+            <map>
+                <entry>
+                    <key><value>lilaoshi</value></key><ref bean="teacher01"></ref>
+                </entry>
+                <entry>
+                    <key><value>lilaoshi1</value></key><ref bean="teacher01"></ref>
+                </entry>
+                <entry>
+                    <key><value>2</value></key><ref bean="teacher01"></ref>
+                </entry>
+                <entry>
+                    <key><value>lilaoshi3</value></key><ref bean="teacher01"></ref>
+                </entry>
+
+            </map>
+        </property>
+    </bean>
+</beans>
