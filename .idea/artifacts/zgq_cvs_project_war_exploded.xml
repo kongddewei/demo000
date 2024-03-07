@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="zgq_cvs_project:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/zgq_cvs_project_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="zgq_cvs_project/web/Web" />
+    </root>
+  </artifact>
+</component>
